@@ -27,7 +27,7 @@ const run = async (uri, people) => {
     };
 };
 
-const people = generatePeople(1000);
+const people = generatePeople(10000);
 
 run('mongodb://localhost:27018/test', people)
     .then(({ writeExecTime, readExecTime }) => {
