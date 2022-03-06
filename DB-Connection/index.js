@@ -1,3 +1,4 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
 const PersonSchema = require('./PersonSchema');
 const { executionTime } = require('./lib');
@@ -43,7 +44,7 @@ run('mongodb://localhost:27017/test', people)
     .catch((err) => console.log(err));
 
 run(
-    'mongodb+srv://inctnce:mZ3agqp8C4ETEvsN@cluster0.jfcs7.mongodb.net/Grid?retryWrites=true&w=majority',
+    `mongodb+srv://inctnce:${process.env.REMOTE_MONGO_PASSWD}@cluster0.jfcs7.mongodb.net/Grid?retryWrites=true&w=majority`,
     people
 )
     .then(({ writeExecTime, readExecTime }) => {
