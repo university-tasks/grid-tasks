@@ -1,0 +1,17 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.stackItem {
+    margin-bottom: 8px;
+}
+
+.stack {
+    width: 50%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}

@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  server:
+    build:
+      target: prod
+    image: inctnce/grid-crypto-server
+    command: npm start
+  
+  client:
+    build:
+      target: prod
+    image: inctnce/grid-crypto-client
+    command: npm start
